@@ -34,8 +34,8 @@ class ClientMeta(type):
 class Client(object, metaclass=ClientMeta):
     __metaclass__ = ClientMeta
     cached_module = {}
-    self.BASE_URL = "https://partner.shopeemobile.com/api/v1/"
-    self.PER_MINUTE_API_RATE = 1000
+    BASE_URL = "https://partner.shopeemobile.com/api/v1/"
+    PER_MINUTE_API_RATE = 1000
 
     def __init__(self, shop_id, partner_id, secret_key):
         self.shop_id = shop_id
