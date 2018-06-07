@@ -68,22 +68,3 @@ Quick Start
         print(resp)
 
 ```
-
-
-
-
-
-
-
-
-Donate（joke~）
-------
-
-If this library helped you out feel free to donate.
-
-- ETH:  
-  0x46f56b134b5E71032923a030db888DEE12913042  
-- NEO:  
-  ANQnFi8h7i5R3WSLGr6753diU674pbEKQT  
-- ETN:  
-  etnjwD3DoyiRyguxGA9kvTKej72CWNbuwFLES6WGGDPK9FtCXV1rCLKK2tAE1EJQVuZPJ4ffVMmzYUzfUnTUor7982z3goPVCX  
