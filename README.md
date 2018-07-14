@@ -35,11 +35,8 @@ Please replace with your valid parameter(shopid,partnerid,token etc.)before sumb
 on how to become a developer and utilize Shopee OpenAPI services.
 
 - Apply Authority Route:    
-    Apply Developer Authority →    
-    Develper Authentication →     
-    Build New App's Token →     
-    Developing and Testing →     
-    Seller Authority
+    Apply Developer Authority → Develper Authentication → Build New App's Token →     
+    Developing and Testing → Seller Authority
 
 
 
