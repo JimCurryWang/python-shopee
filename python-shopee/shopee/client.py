@@ -9,6 +9,7 @@ from .variation import Variation
 from .logistic import Logistic
 from .rma import RMA
 from .category import Category
+from .shop import Shop
 
 # installed sub-module
 installed_module = {
@@ -17,7 +18,8 @@ installed_module = {
     "variation": Variation,
     "logistic": Logistic,
     "rma": RMA,
-    "category": Category
+    "category": Category,
+    "shop":Shop
 }
 
 
