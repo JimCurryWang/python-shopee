@@ -1,4 +1,4 @@
-Welcome to python-shopee v1.0.0
+Welcome to python-shopee v1.1
 ================================
 Shopee Partners API python implementation 
 
@@ -25,6 +25,20 @@ Features
 - No need to generate timestamps yourself, the wrapper does it for you  
 - Response exception handling  
 - Item,Logistic,Order,Returns,Shop functionality  
+
+Developer Note
+--------------
+From Aug.2018 ShopeePartnerAPI will change the original apply mechanism.
+Please replace with your valid parameter(shopid,partnerid,token etc.) before sumbitting the call.
+
+To get started, please check the [Developer Guide under Documentation](https://open.shopee.com/) - Overview - Developer Guide on how to become a developer and utilize Shopee OpenAPI services.
+
+
+About testtools platform
+------------------------
+The default parameters are dummies except the PartnerID and Partner Key dedicated to your APP. Please replace with your valid parameter(shopid etc.) before sumbitting the call
+The testtools is based on PRODUCTION environment, please apply your PRODUCTION credential and parameters
+The "Request" and "Sign" tab aim to assist developer on verifying the authentication signature of API calls
 
 
 Quick Start
