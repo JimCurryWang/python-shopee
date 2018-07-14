@@ -34,6 +34,10 @@ Please replace with your valid parameter(shopid,partnerid,token etc.)before sumb
 - To get started, please check the [Developer Guide under Documentation](https://open.shopee.com/) - Overview - Developer Guide    
 on how to become a developer and utilize Shopee OpenAPI services.
 
+- Apply Authority Route:    
+Apply Developer Authority → Develper Authentication → Build New App's Token → Developing and Testing → Seller Authority
+
+
 
 About testtools platform
 ------------------------
