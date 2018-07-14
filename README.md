@@ -68,3 +68,9 @@ Quick Start
         print(resp)
 
 ```
+
+Publish History
+--------
+20180214 ShopeePartnerAPI main function building.
+20180714 Add new class method - shop (This class can get information or update information of shop ,and get shop performance includes the indexes from "My Performance" of Seller Center. )
+
