@@ -96,3 +96,19 @@ Publish History
 - 20180714 Add new class method - shop    
 This class can get information or update information of shop ,and get shop performance includes the indexes from "My Performance" of Seller Center.
 
+
+To Be Announce
+--------
+New API
+- shopee.shop.Performance
+Shop performance includes the indexes from "My Performance" of Seller Center.
+
+- shopee.item.GetCategoriesByCountry
+Use this api to get categories list filtered by country and cross border without using shopID. 3rd-party vendor should find it easier to store category without using a specific shopID.
+
+- Optimized API
+shopee.orders.GetOrderDetails
+Added pay_time field in the return parameters for order payment time.
+
+
+
