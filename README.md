@@ -1,6 +1,6 @@
 Welcome to python-shopee v1.1
 ================================
-Shopee Partners API python implementation 
+Shopee Partners API for python implementation 
 
 This is an unofficial Python implementation for the [Shopee Partner REST API](https://partner.test.shopeemobile.com/docs/).  
 The Script is in no way affiliated with Shopee, use at your own risk.
