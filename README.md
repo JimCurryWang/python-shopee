@@ -75,10 +75,6 @@ client = pyshopee.Client(shopid, partnerid, API_key)
 # UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
 resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
 print(resp)
-
-
->>>
-
 ```
 #### get order list 
 
@@ -121,7 +117,7 @@ Advance
     - get_attributes(**kwargs)
 2. client.logistic
     - get_logistics()
-     Use this call to get all supported Logistic Channel
+    Use this call to get all supported Logistic Channel
     - get_address()
     Use this call to get all required param for init logistic.
     - get_airway_bill(self, **kwargs)
