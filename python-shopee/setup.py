@@ -11,13 +11,13 @@ except:
  
 NAME = "python-shopee"
 PACKAGES = ["hmac","hashlib","requests","urllib"]
-DESCRIPTION = "Shopee Partners API python implementation , This is an unofficial Python implementation for the Shopee Partner REST API."
+DESCRIPTION = "python implementation for Shopee Partners API."
 LONG_DESCRIPTION = read("README.md")
-KEYWORDS = "Shopee,Partners API,Shopee Partners API,python-shopee"
-AUTHOR = "jimcurrywang & ketu"
+KEYWORDS = "Shopee,Partners API,Shopee Partners API,python-shopee,pyshopee"
+AUTHOR = "jimcurrywang"
 AUTHOR_EMAIL = "jimcurrywang@gmail.com"
 URL = "https://github.com/JimCurryWang/python-shopee"
-VERSION = "1.0.0"
+VERSION = "1.2.2"
 LICENSE = "MIT"
 
 setup(
