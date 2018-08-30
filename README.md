@@ -46,49 +46,124 @@ About testtools platform
   Please replace with your valid parameter(shopid etc.) before sumbitting the call.    
 - The testtools is based on PRODUCTION environment, please apply your PRODUCTION credential and parameters
   The "Request" and "Sign" tab aim to assist developer on verifying the authentication signature of API calls
+  
 
+Install
+-------
+1. pip install from pypi
+```shell
+$ pip install pyshopee
+```
+2. clone the repository to your local folder
+```shell
+$ cd python-shopee
+```
+```shell
+$ python setup.py install
+```
 
 Quick Start
 -----------
 
+#### import pyshopee & get order by status
 ```python
+import pyshopee
 
-    from shopee.client import Client
-    
-    client = Client(shopid, partnerid, API_key)
-    
-    def test_get_order_by_status(client):
-      '''get_order_by_status  
-         UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
-      '''
-        try:
-            resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
-            print(resp)
-        except Exception as e:
-            print(e)
+client = pyshopee.Client(shopid, partnerid, API_key)
 
-    def test_get_order_list(client):
-        resp = client.order.get_order_list(create_time_from = 1512117303, create_time_to=1512635703)
-        print(resp)
-
-    def test_get_order_detail(client):
-        '''ordersn_list    String[]    
-           The set of order IDs. You can specify, at most, 50 OrderIDs in this call.
-        '''
-        ordersn_list = [ '1712071633982A7','1712071632981JW','171207163097YCJ']
-        resp = client.order.get_order_detail(ordersn_list = ordersn_list )
-        print(resp)
+# get_order_by_status
+# UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
+resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
+print(resp)
 
 
-    def test_get_order_escrow_detail():
-        '''ordersn String  
-           Shopee's unique identifier for an order.
-        '''
-        ordersn = '1712071633982A7'
-        resp = client.order.get_order_escrow_detail(ordersn = ordersn)
-        print(resp)
+>>>
 
 ```
+#### get order list 
+
+```python
+# get_order_list
+resp = client.order.get_order_list(create_time_from = 1512117303, create_time_to=1512635703)
+print(resp)
+```
+#### get order detail
+
+```python
+'''
+ordersn_list , type: String[]    
+The set of order IDs. You can specify, at most, 50 OrderIDs in this call.
+'''
+# get_order_detail
+ordersn_list = [ '1712071633982A7','1712071632981JW','171207163097YCJ']
+resp = client.order.get_order_detail(ordersn_list = ordersn_list )
+print(resp)
+```
+
+#### get order escrow detail
+```python
+'''
+ordersn , type:String [] 
+Shopee's unique identifier for an order.
+'''
+# get_order_escrow_detail
+ordersn = '1712071633982A7'
+resp = client.order.get_order_escrow_detail(ordersn = ordersn)
+print(resp)
+```
+
+
+Advance
+-------
+
+1. client.category
+    - get_categories(**kwargs)
+    - get_attributes(**kwargs)
+2. client.logistic
+    - get_logistics()
+     Use this call to get all supported Logistic Channel
+    - get_address()
+    Use this call to get all required param for init logistic.
+    - get_airway_bill(self, **kwargs)
+    Use this API to get airway bill for orders
+    - get_branch(self, **kwargs)
+    Use this call to get all required param for init logistic.
+    - get_logistic_message(self, **kwargs)
+    Use this call to get the logistics tracking information of an order.
+    - get_order_logistic(self, **kwargs)
+    Use this call to fetch the logistics information of an order, these info can be used for waybill printing.
+    - get_parameter_for_init(self, **kwargs)
+    Use this call to get all required param for init logistic.
+    - get_time_slot(self, **kwargs)
+    Use this call to get all required param for init logistic.
+    - get_tracking_no(self, **kwargs)
+    Use this API to get tracking number of orders
+    - init(**kwargs)
+    Use this call to arrange Pickup or Dropoff. Should call shopee.logistics.GetParameterForInit to fetch all required param first.
+    - set_logistic_status(self, **kwargs)
+    Set Logistic Status to PICKUP_DONE, this API only works for non-integrated logistic channels
+    - set_tracking_no(self, **kwargs)
+    User this call to set tracking number for each order in batch.
+    
+3. client.order
+    - get_order_list(**kwargs)
+    GetOrdersList is the recommended call to use for order management.
+    - get_order_detail(**kwargs):
+    Use this call to retrieve detailed information about one or more orders based on OrderIDs.
+    - get_order_escrow_detail(**kwargs):
+    Use this call to retrieve detailed escrow information about one order based on OrderID.
+    - get_order_by_status(**kwargs):
+    GetOrdersByStatus is the recommended call to use for order management.
+    - cancel_order(**kwargs):
+    Use this call to cancel an order
+    - accept_buyer_cancellation(**kwargs):
+    Use this call to accept buyer cancellation
+    - reject_buyer_cancellation(**kwargs):
+    Use this call to reject buyer cancellation
+4. client.product
+5. client.rma
+6. client.shope
+7. client.variation
 
 Publish History
 --------
