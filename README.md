@@ -112,6 +112,10 @@ print(resp)
 Advance
 -------
 
+```python
+    client.[type].[function name]
+```
+
 #### 1. client.category
     - get_categories(**kwargs)
     
