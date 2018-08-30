@@ -136,7 +136,7 @@ Advance
         - Use this API to get tracking number of orders
     - init(**kwargs)
         - Use this call to arrange Pickup or Dropoff. Should call shopee.logistics.GetParameterForInit to fetch all required param first.
-    - **set_logistic_status(**kwargs)**
+    - set_logistic_status(**kwargs)
         - Set Logistic Status to PICKUP_DONE, this API only works for non-integrated logistic channels
     - set_tracking_no(**kwargs)
         - User this call to set tracking number for each order in batch.
@@ -157,6 +157,36 @@ Advance
     - reject_buyer_cancellation(**kwargs):
         - Use this call to reject buyer cancellation
 4. client.product
+    - add(product_data)
+        - Use this call to add a product item. Should get dependency by calling below API first
+
+    - add_item_img(**kwargs)
+        - Use this call to add product item images.
+        
+    - delete(**kwargs)
+        - Use this call to delete a product item.
+
+    - delete_item_img(**kwargs)
+        - Use this call to delete a product item image.
+
+    - get_item_detail(**kwargs)
+        - Use this call to get detail of item
+
+    - get_item_list(**kwargs)
+        - Use this call to get a list of items
+
+    - update(update_data)
+        - Use this call to update a product item. Should get dependency by calling below API first
+        
+    - update_price(**kwargs)
+        - Use this call to update item price
+
+    - update_stock(**kwargs)
+        - Use this call to update item stock
+    
+    - insert_item_img(**kwargs)
+        - Use this call to add one item image in assigned position.
+    
 5. client.rma
 6. client.shope
 7. client.variation
