@@ -114,48 +114,67 @@ Advance
 
 1. client.category
     - get_categories(**kwargs)
+    
     - get_attributes(**kwargs)
 2. client.logistic
     - get_logistics()
         - Use this call to get all supported Logistic Channel
+        
     - get_address()
         - Use this call to get all required param for init logistic.
+        
     - get_airway_bill(**kwargs)
          - Use this API to get airway bill for orders
+         
     - get_branch(**kwargs)
          - Use this call to get all required param for init logistic.
+         
     - get_logistic_message(**kwargs)
         - Use this call to get the logistics tracking information of an order.
+        
     - get_order_logistic(**kwargs)
         - Use this call to fetch the logistics information of an order, these info can be used for waybill printing.
+        
     - get_parameter_for_init(**kwargs)
         - Use this call to get all required param for init logistic.
+        
     - get_time_slot(**kwargs)
         - Use this call to get all required param for init logistic.
+        
     - get_tracking_no(**kwargs)
         - Use this API to get tracking number of orders
+        
     - init(**kwargs)
         - Use this call to arrange Pickup or Dropoff. Should call shopee.logistics.GetParameterForInit to fetch all required param first.
+        
     - set_logistic_status(**kwargs)
         - Set Logistic Status to PICKUP_DONE, this API only works for non-integrated logistic channels
+        
     - set_tracking_no(**kwargs)
         - User this call to set tracking number for each order in batch.
     
 3. client.order
     - get_order_list(**kwargs)
         - GetOrdersList is the recommended call to use for order management.
+        
     - get_order_detail(**kwargs):
         - Use this call to retrieve detailed information about one or more orders based on OrderIDs.
+        
     - get_order_escrow_detail(**kwargs):
         - Use this call to retrieve detailed escrow information about one order based on OrderID.
+        
     - get_order_by_status(**kwargs):
         - GetOrdersByStatus is the recommended call to use for order management.
+        
     - cancel_order(**kwargs):
         - Use this call to cancel an order
+        
     - accept_buyer_cancellation(**kwargs):
         - Use this call to accept buyer cancellation
+        
     - reject_buyer_cancellation(**kwargs):
         - Use this call to reject buyer cancellation
+        
 4. client.product
     - add(product_data)
         - Use this call to add a product item. Should get dependency by calling below API first
@@ -188,8 +207,35 @@ Advance
         - Use this call to add one item image in assigned position.
     
 5. client.rma
-6. client.shope
+    - confirm_return(**kwargs)
+        - Confirm return
+        
+    - dispute_return(**kwargs)
+        - Dispute return
+        
+    - get_return_list(**kwargs)
+        - Get return list
+    
+6. client.shop
+    - get_shop_info(**kwargs):
+        - Use this call to get information of shop.
+    - update_shop_info(**kwargs):
+        - Use this call to update information of shop.
+    - performance(**kwargs):
+        - Shop performance includes the indexes from "My Performance" of Seller Center.
+
 7. client.variation
+    - add(variation_data)
+        - Use this call to add item variations
+
+    - delete(**kwargs)
+        - Use this call to delete item variation
+
+    - update_price(**kwargs)
+        - Use this call to update item variation price
+
+    - update_stock(**kwargs)
+        - Use this call to update item variation stock
 
 Publish History
 --------
