@@ -69,7 +69,7 @@ class Client(object, metaclass=ClientMeta):
 
     def _build_request(self, uri, method, body):
         method = method.upper()
-        url = self.BASE_URL + os.sep + uri
+        url = self.BASE_URL + "/" + uri
         authorization = self._sign(url, body)
         
         headers = {
