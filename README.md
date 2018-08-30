@@ -2,8 +2,8 @@ pyshopee v1.0.0
 ================================
 
 [![PyPI](https://img.shields.io/pypi/v/nine.svg)](https://pypi.org/project/pyshopee/)
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
-![Depfu](https://img.shields.io/depfu/depfu/example-ruby.svg)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/JimCurryWang/python-shopee)
+[![Depfu](https://img.shields.io/depfu/depfu/example-ruby.svg)](https://github.com/JimCurryWang/python-shopee)
 
 
 Shopee Partners API - python implementation 
@@ -118,7 +118,7 @@ print(resp)
 ```
 
 
-Advance
+Advance Details for others functions
 -------
 
 ```python
