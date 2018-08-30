@@ -112,11 +112,11 @@ print(resp)
 Advance
 -------
 
-1. client.category
+#### 1. client.category
     - get_categories(**kwargs)
     
     - get_attributes(**kwargs)
-2. client.logistic
+#### 2. client.logistic
     - get_logistics()
         - Use this call to get all supported Logistic Channel
         
@@ -153,7 +153,7 @@ Advance
     - set_tracking_no(**kwargs)
         - User this call to set tracking number for each order in batch.
     
-3. client.order
+#### 3. client.order
     - get_order_list(**kwargs)
         - GetOrdersList is the recommended call to use for order management.
         
@@ -175,7 +175,7 @@ Advance
     - reject_buyer_cancellation(**kwargs):
         - Use this call to reject buyer cancellation
         
-4. client.product
+#### 4. client.product
     - add(product_data)
         - Use this call to add a product item. Should get dependency by calling below API first
 
@@ -206,7 +206,7 @@ Advance
     - insert_item_img(**kwargs)
         - Use this call to add one item image in assigned position.
     
-5. client.rma
+#### 5. client.rma
     - confirm_return(**kwargs)
         - Confirm return
         
@@ -216,7 +216,7 @@ Advance
     - get_return_list(**kwargs)
         - Get return list
     
-6. client.shop
+#### 6. client.shop
     - get_shop_info(**kwargs):
         - Use this call to get information of shop.
     - update_shop_info(**kwargs):
@@ -224,7 +224,7 @@ Advance
     - performance(**kwargs):
         - Shop performance includes the indexes from "My Performance" of Seller Center.
 
-7. client.variation
+#### 7. client.variation
     - add(variation_data)
         - Use this call to add item variations
 
