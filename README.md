@@ -113,7 +113,8 @@ Advance
 -------
 
 ```python
-    client.[type].[function name]
+# usage
+client.[type].[function name]
 ```
 
 #### 1. client.category
