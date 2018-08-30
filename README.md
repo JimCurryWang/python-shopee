@@ -1,4 +1,4 @@
-Welcome to python-shopee v1.1
+Welcome to python-shopee v1.0.0
 ================================
 Shopee Partners API for python implementation 
 
