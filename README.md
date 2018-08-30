@@ -1,4 +1,4 @@
-pyshopee v1.2.0
+pyshopee v1.2.1
 ================================
 
 [![PyPI](https://img.shields.io/pypi/v/nine.svg)](https://pypi.org/project/pyshopee/)
