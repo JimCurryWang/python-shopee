@@ -5,10 +5,10 @@ pyshopee v1.0.0
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Depfu](https://img.shields.io/depfu/depfu/example-ruby.svg)
 
-================================
-Shopee Partners API for python implementation 
 
-This is an unofficial Python implementation for the [Shopee Partner REST API](https://partner.test.shopeemobile.com/docs/).  
+Shopee Partners API - python implementation 
+---------------------------------------------
+This is Python implementation for the [Shopee Partner REST API](https://partner.test.shopeemobile.com/docs/).  
 The Script is in no way affiliated with Shopee, use at your own risk.
 
 If you came here looking for the [Shopee seller center](https://seller.shopee.tw/),to purchase , then [go here](https://shopee.tw/).
