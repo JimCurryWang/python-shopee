@@ -10,7 +10,7 @@ If you came here looking for the [Shopee seller center](https://seller.shopee.tw
 _Source code_  
     https://github.com/JimCurryWang/python-shopee/
 
-_pypi_
+_pypi_    
     https://pypi.org/project/pyshopee
 
 _Shopee Parter API Documentation_  
