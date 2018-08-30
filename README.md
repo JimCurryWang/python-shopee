@@ -1,4 +1,8 @@
 Welcome to python-shopee v1.0.0
+[![PyPI](https://img.shields.io/pypi/v/nine.svg)](https://pypi.org/project/pyshopee/)
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+![Depfu](https://img.shields.io/depfu/depfu/example-ruby.svg)
+
 ================================
 Shopee Partners API for python implementation 
 
