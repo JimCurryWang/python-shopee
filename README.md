@@ -117,29 +117,29 @@ Advance
     - get_attributes(**kwargs)
 2. client.logistic
     - get_logistics()
-    Use this call to get all supported Logistic Channel
+        - Use this call to get all supported Logistic Channel
     - get_address()
-    Use this call to get all required param for init logistic.
+        - Use this call to get all required param for init logistic.
     - get_airway_bill(self, **kwargs)
-    Use this API to get airway bill for orders
+         - Use this API to get airway bill for orders
     - get_branch(self, **kwargs)
-    Use this call to get all required param for init logistic.
+         - Use this call to get all required param for init logistic.
     - get_logistic_message(self, **kwargs)
-    Use this call to get the logistics tracking information of an order.
+        - Use this call to get the logistics tracking information of an order.
     - get_order_logistic(self, **kwargs)
-    Use this call to fetch the logistics information of an order, these info can be used for waybill printing.
+        - Use this call to fetch the logistics information of an order, these info can be used for waybill printing.
     - get_parameter_for_init(self, **kwargs)
-    Use this call to get all required param for init logistic.
+        - Use this call to get all required param for init logistic.
     - get_time_slot(self, **kwargs)
-    Use this call to get all required param for init logistic.
+        - Use this call to get all required param for init logistic.
     - get_tracking_no(self, **kwargs)
-    Use this API to get tracking number of orders
+        - Use this API to get tracking number of orders
     - init(**kwargs)
-    Use this call to arrange Pickup or Dropoff. Should call shopee.logistics.GetParameterForInit to fetch all required param first.
+        - Use this call to arrange Pickup or Dropoff. Should call shopee.logistics.GetParameterForInit to fetch all required param first.
     - set_logistic_status(self, **kwargs)
-    Set Logistic Status to PICKUP_DONE, this API only works for non-integrated logistic channels
+        - Set Logistic Status to PICKUP_DONE, this API only works for non-integrated logistic channels
     - set_tracking_no(self, **kwargs)
-    User this call to set tracking number for each order in batch.
+        - User this call to set tracking number for each order in batch.
     
 3. client.order
     - get_order_list(**kwargs)
