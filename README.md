@@ -78,7 +78,7 @@ Quick Start
 ```python
 import pyshopee
 
-client = pyshopee.Client( your_shopid, your_partnerid, your_API_key )
+client = pyshopee.Client( shopid, partnerid, API_key )
 
 # get_order_by_status
 # UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
