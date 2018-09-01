@@ -1,0 +1,17 @@
+README.md
+setup.py
+pyshopee/__init__.py
+pyshopee/base.py
+pyshopee/category.py
+pyshopee/client.py
+pyshopee/logistic.py
+pyshopee/order.py
+pyshopee/product.py
+pyshopee/rma.py
+pyshopee/shop.py
+pyshopee/variation.py
+pyshopee.egg-info/PKG-INFO
+pyshopee.egg-info/SOURCES.txt
+pyshopee.egg-info/dependency_links.txt
+pyshopee.egg-info/top_level.txt
+pyshopee.egg-info/zip-safe
