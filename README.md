@@ -9,7 +9,6 @@ pyshopee v1.2.1
 Shopee Partners API - python implementation 
 ---------------------------------------------
 This is Python implementation for the [Shopee Partner REST API](https://partner.test.shopeemobile.com/docs/).  
-The Script is in no way affiliated with Shopee, use at your own risk.
 
 If you came here looking for the [Shopee seller center](https://seller.shopee.tw/),to purchase , then [go here](https://shopee.tw/).
 
@@ -271,5 +270,6 @@ Use this api to get categories list filtered by country and cross border without
 shopee.orders.GetOrderDetails
 Added pay_time field in the return parameters for order payment time.
 
-
+<center>The Script is in no way affiliated with Shopee, use at your own risk.</center>
+<center>Copyright © 2018</center>
 
