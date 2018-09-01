@@ -30,9 +30,10 @@ Features
 
 - Implementation of Manage Orders, Manage Products and Manage Shop Accounts.  
 - Simple handling of authentication  
-- No need to generate timestamps yourself, the wrapper does it for you  
-- Response exception handling  
-- Item,Logistic,Order,Returns,Shop functionality  
+- No need to generate timestamps yourself, the wrapper does it for you.
+- Good Response exception handling.
+- Item, Logistic, Order, Returns, Shop module functionality.
+- New feature will keep maintaining !
 
 Developer Note
 --------------
@@ -77,7 +78,7 @@ Quick Start
 ```python
 import pyshopee
 
-client = pyshopee.Client(shopid, partnerid, API_key)
+client = pyshopee.Client( your_shopid, your_partnerid, your_API_key )
 
 # get_order_by_status
 # UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
