@@ -270,6 +270,7 @@ Use this api to get categories list filtered by country and cross border without
 shopee.orders.GetOrderDetails
 Added pay_time field in the return parameters for order payment time.
 
-<center>The Script is in no way affiliated with Shopee, use at your own risk.</center>
+
+<center>The Script is in no way affiliated with Shopee, use at your own risk.</center>    
 <center>Copyright © 2018</center>
 
