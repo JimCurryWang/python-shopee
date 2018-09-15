@@ -48,7 +48,7 @@ _5_ main parts Implementation
 
 
 
-Install
+Installation
 -------
 1. pip install from pypi
 ```shell
