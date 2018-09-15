@@ -2,29 +2,32 @@ import codecs
 import os
 import sys
 
+
 try:
-    from setuptools import setup
+    from setuptools import setup,find_packages
 except:
-    from distutils.core import setup
+    from distutils.core import setup,find_packages
 
 
+with open("README.md", "r") as fh:
+    LONG_DESCRIPTION = fh.read()
  
-NAME = "python-shopee"
-PACKAGES = ["hmac","hashlib","requests","urllib"]
+
+NAME = "pyshopee"
+PACKAGES = ['hmac','hashlib','requests','urllib']
 DESCRIPTION = "python implementation for Shopee Partners API."
-LONG_DESCRIPTION = read("README.md")
-KEYWORDS = "Shopee,Partners API,Shopee Partners API,python-shopee,pyshopee"
+KEYWORDS = "pyshopee,Shopee,Shopee Partners API,python-shopee"
 AUTHOR = "jimcurrywang"
 AUTHOR_EMAIL = "jimcurrywang@gmail.com"
 URL = "https://github.com/JimCurryWang/python-shopee"
-VERSION = "1.2.2"
+VERSION = "1.3.1"
 LICENSE = "MIT"
 
 setup(
     name = NAME,
     version = VERSION,
     description = DESCRIPTION,
-    long_description = LONG_DESCRIPTION,
+    # long_description = LONG_DESCRIPTION,
     classifiers = [
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
@@ -36,7 +39,7 @@ setup(
     author_email = AUTHOR_EMAIL,
     url = URL,
     license = LICENSE,
-    packages = PACKAGES,
+    packages = find_packages(),
     include_package_data=True,
     zip_safe=True,
 )
