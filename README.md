@@ -13,7 +13,7 @@ This is Python implementation for the [Shopee Partner REST API](https://partner.
 If you came here looking for the [Shopee seller center](https://seller.shopee.tw/),to shoping , then [go here](https://shopee.tw/).
 
 ```shell
-pip install pyshopee
+$ pip install pyshopee
 ```
 
 ```python
@@ -21,8 +21,7 @@ import pyshopee
 
 client = pyshopee.Client( shopid, partnerid, API_key )
 
-# get_order_by_status
-# UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
+# get_order_by_status (UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL)
 resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
 print(resp)
 ```
@@ -72,8 +71,7 @@ import pyshopee
 
 client = pyshopee.Client( shopid, partnerid, API_key )
 
-# get_order_by_status
-# UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
+# get_order_by_status (UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL)
 resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
 print(resp)
 ```
