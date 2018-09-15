@@ -40,11 +40,12 @@ _5_ main parts Implementation
 
 #### 2. Orders Management Module : [Orders](https://open.shopee.com/documents?module=4&type=1&id=394)
 
-#### 3. Logistics Management Module : [logistics](https://open.shopee.com/documents?module=3&type=1&id=384)
+#### 3. Logistics Management Module : [Logistics](https://open.shopee.com/documents?module=3&type=1&id=384)
 
 #### 4. Products Management Module : [Item](https://open.shopee.com/documents?module=2&type=1&id=365) / [Image](https://open.shopee.com/documents?module=65&type=1&id=412) / [Discount](https://open.shopee.com/documents?module=1&type=1&id=357)
 
 #### 5. RMA Management Module : [Returns](https://open.shopee.com/documents?module=5&type=1&id=401)
+
 
 
 Install
