@@ -37,20 +37,19 @@ Features
 5 main parts Implementation 
 ---------------------------
 
-1. Shop Management Module 
-  - Shop
-  - ShopCategory
-2. Orders Management Module
-  - Orders
-3. Logistics Management Module
-  - Logistics
-4. Products Management Module
-  - Item
-  - Image
-  - Discount
-5. RMA Management Module
-  - Returns
-
+#### 1. Shop Management Module 
+  - [Shop](https://open.shopee.com/documents?module=6&type=1&id=410)
+  - [ShopCategory](https://open.shopee.com/documents?module=7&type=1&id=404)
+#### 2. Orders Management Module
+  - [Orders](https://open.shopee.com/documents?module=4&type=1&id=394)
+#### 3. Logistics Management Module
+  - [logistics](https://open.shopee.com/documents?module=3&type=1&id=384)
+#### 4. Products Management Module
+  - [Item](https://open.shopee.com/documents?module=2&type=1&id=365)
+  - [Image](https://open.shopee.com/documents?module=65&type=1&id=412)
+  - [Discount](https://open.shopee.com/documents?module=1&type=1&id=357)
+#### 5. RMA Management Module
+  - [Returns](https://open.shopee.com/documents?module=5&type=1&id=401)
 
 
 Developer Note
