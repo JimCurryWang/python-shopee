@@ -12,19 +12,20 @@ This is Python implementation for the [Shopee Partner REST API](https://partner.
 
 If you came here looking for the [Shopee seller center](https://seller.shopee.tw/),to shoping , then [go here](https://shopee.tw/).
 
-_Source code_  
-    https://github.com/JimCurryWang/pyshopee
+```shell
+pip install pyshopee
+```
 
-_pypi_    
-    https://pypi.org/project/pyshopee
+```python
+import pyshopee
 
-_Shopee Parter API Documentation_  
-    https://partner.test.shopeemobile.com/docs/
-    
-_Registration for Shopee Partner API usage_  
-    https://docs.google.com/forms/d/e/1FAIpQLSeCSsRHQSoQvZccOSHIl5DZAPIkSnS4ivN0Z6rp6N7JIoofvQ/viewform?c=0&w=1
-    
-    
+client = pyshopee.Client( shopid, partnerid, API_key )
+
+# get_order_by_status
+# UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL
+resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
+print(resp)
+```
 Features
 --------
   
@@ -171,7 +172,19 @@ Publish History
     - \+ Create new Discount module
     - \+ Create new ShopCategory module
 
+Note
+----
 
+_Source code_  
+    https://github.com/JimCurryWang/pyshopee
 
+_pypi_    
+    https://pypi.org/project/pyshopee
 
+_Shopee Parter API Documentation_  
+    https://partner.test.shopeemobile.com/docs/
+    
+_Registration for Shopee Partner API usage_  
+    https://docs.google.com/forms/d/e/1FAIpQLSeCSsRHQSoQvZccOSHIl5DZAPIkSnS4ivN0Z6rp6N7JIoofvQ/viewform?c=0&w=1
+    
 
