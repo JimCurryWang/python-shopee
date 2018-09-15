@@ -37,22 +37,18 @@ Features
 5 main parts Implementation 
 ---------------------------
 
-#### Shop Management Module (店鋪管理模塊)
+1. Shop Management Module 
   - Shop
   - ShopCategory
-
-#### Orders Management Module(订单管理模块)
+2. Orders Management Module
   - Orders
-
-#### Logistics Management Module(物流管理模块)
+3. Logistics Management Module
   - Logistics
-
-#### Products Management Module(产品管理模块)
+4. Products Management Module
   - Item
   - Image
   - Discount
-  
-#### RMA Management Module(退货退款模块)
+5. RMA Management Module
   - Returns
 
 
