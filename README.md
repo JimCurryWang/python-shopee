@@ -34,18 +34,17 @@ Features
 - Good Response exception handling !
 - New feature will keep maintaining !
 
-5 main parts Implementation 
+_5_ main parts Implementation
 ---------------------------
-#### Shop Management Module : [Shop](https://open.shopee.com/documents?module=6&type=1&id=410) / [ShopCategory](https://open.shopee.com/documents?module=7&type=1&id=404)
+#### 1. Shop Management Module : [Shop](https://open.shopee.com/documents?module=6&type=1&id=410) / [ShopCategory](https://open.shopee.com/documents?module=7&type=1&id=404)
 
-#### Orders Management Module : [Orders](https://open.shopee.com/documents?module=4&type=1&id=394)
+#### 2. Orders Management Module : [Orders](https://open.shopee.com/documents?module=4&type=1&id=394)
 
-#### Logistics Management Module : [logistics](https://open.shopee.com/documents?module=3&type=1&id=384)
+#### 3. Logistics Management Module : [logistics](https://open.shopee.com/documents?module=3&type=1&id=384)
 
-#### Products Management Module : [Item](https://open.shopee.com/documents?module=2&type=1&id=365) / [Image](https://open.shopee.com/documents?module=65&type=1&id=412) / [Discount](https://open.shopee.com/documents?module=1&type=1&id=357)
+#### 4. Products Management Module : [Item](https://open.shopee.com/documents?module=2&type=1&id=365) / [Image](https://open.shopee.com/documents?module=65&type=1&id=412) / [Discount](https://open.shopee.com/documents?module=1&type=1&id=357)
 
-#### RMA Management Module : [Returns](https://open.shopee.com/documents?module=5&type=1&id=401)
-
+#### 5. RMA Management Module : [Returns](https://open.shopee.com/documents?module=5&type=1&id=401)
 
 Developer Note
 --------------
