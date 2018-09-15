@@ -263,7 +263,7 @@ Publish History
 - 20180714 
     - \+ Add new class method - shop    
       This class can get information or update information of shop ,and get shop performance includes the indexes from "My Performance" of Seller Center.
-- 20180915n
+- 20180915
     - \+ Add item batch update
     - \- Rename product module to item module
     - \- Combine variation module into item module
