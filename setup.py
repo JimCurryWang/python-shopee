@@ -19,7 +19,7 @@ DESCRIPTION = "python implementation for Shopee Partners API."
 KEYWORDS = "pyshopee,Shopee,Shopee Partners API,python-shopee"
 AUTHOR = "jimcurrywang"
 AUTHOR_EMAIL = "jimcurrywang@gmail.com"
-URL = "https://github.com/JimCurryWang/python-shopee"
+URL = "https://github.com/JimCurryWang/pyshopee"
 VERSION = "1.3.1"
 LICENSE = "MIT"
 
