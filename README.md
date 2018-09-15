@@ -70,7 +70,7 @@ $ pip install pyshopee
 ```
 2. clone the repository to your local folder
 ```shell
-$ cd python-shopee
+$ cd pyshopee
 ```
 ```shell
 $ python setup.py install
