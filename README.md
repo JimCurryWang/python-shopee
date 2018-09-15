@@ -1,7 +1,7 @@
-pyshopee v1.2.2
+pyshopee v1.3.1
 ================================
 
-[![PyPI](https://img.shields.io/badge/pypi-v1.2.2-blue.svg)](https://pypi.org/project/pyshopee/)
+[![PyPI](https://img.shields.io/badge/pypi-v1.3.1-blue.svg)](https://pypi.org/project/pyshopee/)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/JimCurryWang/python-shopee)
 [![Depfu](https://img.shields.io/depfu/depfu/example-ruby.svg)](https://github.com/JimCurryWang/python-shopee)
   
@@ -258,21 +258,20 @@ client.[type].[function name]
 
 Publish History
 --------
-- 20180214 ShopeePartnerAPI main function building.  
-- 20180714 Add new class method - shop    
-This class can get information or update information of shop ,and get shop performance includes the indexes from "My Performance" of Seller Center.
+- 20180214 
+    - \+ ShopeePartnerAPI main function building.  
+- 20180714 
+    - \+ Add new class method - shop    
+      This class can get information or update information of shop ,and get shop performance includes the indexes from "My Performance" of Seller Center.
+- 20180915n
+    - \+ Add item batch update
+    - \- Rename product module to item module
+    - \- Combine variation module into item module
+    - \+ Create new Image module
+    - \+ Create new Discount module
+    - \+ Create new ShopCategory module
 
 
-To Be Announce
---------
-New API
-- shopee.shop.Performance
-Shop performance includes the indexes from "My Performance" of Seller Center.
 
-- shopee.item.GetCategoriesByCountry
-Use this api to get categories list filtered by country and cross border without using shopID. 3rd-party vendor should find it easier to store category without using a specific shopID.
 
-- Optimized API
-shopee.orders.GetOrderDetails
-Added pay_time field in the return parameters for order payment time.
 
