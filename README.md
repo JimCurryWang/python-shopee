@@ -13,7 +13,7 @@ This is Python implementation for the [Shopee Partner REST API](https://partner.
 If you came here looking for the [Shopee seller center](https://seller.shopee.tw/),to shoping , then [go here](https://shopee.tw/).
 
 _Source code_  
-    https://github.com/JimCurryWang/python-shopee/
+    https://github.com/JimCurryWang/pyshopee
 
 _pypi_    
     https://pypi.org/project/pyshopee
