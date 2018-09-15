@@ -35,6 +35,8 @@ Features
 - Item, Logistic, Order, Returns, Shop module functionality.
 - New feature will keep maintaining !
 
+
+
 Developer Note
 --------------
 - From Aug, 2018  ShopeePartnerAPI  will change the original apply mechanism.        
@@ -44,8 +46,11 @@ Please replace with your valid parameter(shopid,partnerid,token etc.)before sumb
 on how to become a developer and utilize Shopee OpenAPI services.
 
 - Apply Authority Route:    
-    Apply Developer Authority → Develper Authentication → Build New App's Token →     
-    Developing and Testing → Seller Authority
+    1. Apply Developer Authority → 
+    2. Develper Authentication   → 
+    3. Build New App's Token     → 
+    4. Developing and Testing    → 
+    5. Seller Authority
 
 
 
