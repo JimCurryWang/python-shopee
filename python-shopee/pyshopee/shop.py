@@ -41,6 +41,8 @@ class Shop(BaseModule):
 
         :param kwargs:
         :return:
+        
+        @@Significant OpenAPI Updates (2018-09-15/2018-07-18)
         """
         return self.client.execute("shop/performance", "POST", kwargs)
 
