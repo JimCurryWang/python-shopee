@@ -10,7 +10,7 @@ Shopee Partners API - python implementation
 ---------------------------------------------
 This is Python implementation for the [Shopee Partner REST API](https://partner.test.shopeemobile.com/docs/).  
 
-If you came here looking for the [Shopee seller center](https://seller.shopee.tw/),to shoping , then [go here](https://shopee.tw/).
+If you came here looking for the [Shopee seller center](https://seller.shopee.tw/), to shoping, then [go here](https://shopee.tw/).
 
 ```shell
 $ pip install pyshopee
