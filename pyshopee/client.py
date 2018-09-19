@@ -39,7 +39,7 @@ class Client(object, metaclass=ClientMeta):
     CACHED_MODULE = {}
     
     BASE_URL = "https://partner.shopeemobile.com/api/v1"
-    PER_MINUTE_API_RATE = 1000
+    # PER_MINUTE_API_RATE = 1000
 
     def __init__(self, shop_id, partner_id, secret_key):
         self.shop_id = shop_id
