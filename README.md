@@ -1,4 +1,4 @@
-pyshopee v1.3.1
+pyshopee v1.3.2
 ================================
 
 [![PyPI](https://img.shields.io/badge/pypi-v1.3.1-blue.svg)](https://pypi.org/project/pyshopee/)
@@ -169,6 +169,10 @@ Publish History
     - \+ Create new Image module
     - \+ Create new Discount module
     - \+ Create new ShopCategory module
+
+- 20181010
+    - \+ Create new authorize module
+ 
 
 Note
 ----
