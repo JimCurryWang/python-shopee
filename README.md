@@ -24,6 +24,14 @@ client = pyshopee.Client( shopid, partnerid, API_key )
 # get_order_by_status (UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL)
 resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
 print(resp)
+
+
+# shop authorize and cancel_authorize url
+authorize_url = client.shop.authorize(redirect_url="https://shopee.tw")
+print(authorize_url)
+
+cancel_authorize_url = client.shop.cancel_authorize(redirect_url="https://shopee.tw")
+print(cancel_authorize_url)
 ```
 Features
 --------
