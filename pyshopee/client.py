@@ -121,3 +121,18 @@ class Client(object, metaclass=ClientMeta):
         resp = s.send(prepped)
         resp = self._build_response(resp)
         return resp
+
+
+    def shop_authorization(self, uri, method, redirect_url):
+        '''
+            The difference between hmac and hashlib, 
+            hmac uses the provided key to generate a salt and make the hash more strong, while hashlib only hashes the provided message
+
+            In shopee partner API, shopee use hmac for general encryption while using hashlib for Authorize and CancelAuthorize module
+        '''
+        bs = self.secret_key + redirect_url
+        dig = hashlib.sha256(bs.encode()).hexdigest()
+        
+        parameters = "/{0}?id={1}&token={2}&redirect={3}".format(uri,self.partner_id,dig,redirect_url)
+        uri = self.BASE_URL + parameters
+        return uri
