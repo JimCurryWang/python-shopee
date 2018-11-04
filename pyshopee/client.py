@@ -94,7 +94,8 @@ class Client(object, metaclass=ClientMeta):
         if "error" not in body:
             return body
         else:
-            raise AttributeError(body["error"])
+            # raise AttributeError(body["error"])
+            raise AttributeError(body)
 
     def _get_cached_module(self, key):
         CACHED_MODULE = self.CACHED_MODULE.get(key)
