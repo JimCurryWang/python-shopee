@@ -1,7 +1,7 @@
-pyshopee v1.3.2
+pyshopee v1.3.3
 ================================
 
-[![PyPI](https://img.shields.io/badge/pypi-v1.3.2-blue.svg)](https://pypi.org/project/pyshopee/)
+[![PyPI](https://img.shields.io/badge/pypi-v1.3.3-blue.svg)](https://pypi.org/project/pyshopee/)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/JimCurryWang/python-shopee)
 [![Depfu](https://img.shields.io/depfu/depfu/example-ruby.svg)](https://github.com/JimCurryWang/python-shopee)
   
