@@ -228,4 +228,57 @@ class Item(BaseModule):
 
 
 
+    '''
+        2-Tier Variation API set(TW not live)
+            item.InitTierVariation
+            item.AddTierVariation
+            item.GetVariations
+            item.UpdateTierVariationList
+            item.UpdateTierVariationIndex
+
+        @@Significant OpenAPI Updates (2018-12-01)
+    '''
+    
+    def InitTierVariation(self, **kwargs):
+        """
+        Initialize a non-tier-variation item to a tier-variation item, and initialize stock and price for each variation. 
+        This API cannot edit existed tier_variation and variation price/stock.
+        :param kwargs:
+        """
+        return self.client.execute("item/tier_var/init", "POST", kwargs)
+
+    def AddTierVariation(self, **kwargs):
+        """
+        Use this api to add new tier variations in batch. 
+        Tier variation index of variations in the same item must be unique.
+        :param kwargs:
+        """
+        return self.client.execute("item/tier_var/add", "POST", kwargs)
+
+    def GetVariations(self, **kwargs):
+        """
+        Use this call to get tier-variation basic information under an item.
+        :param kwargs:
+        """
+        return self.client.execute("item/tier_var/get", "POST", kwargs)
+
+    def UpdateTierVariationList(self, **kwargs):
+        """
+        Use this api to update tier-variation list of a tier-variation item.
+        :param kwargs:
+        """
+        return self.client.execute("item/tier_var/update_list", "POST", kwargs)
+
+
+    def UpdateTierVariationIndex(self, **kwargs):
+        """
+        Use this api to update existing tier index under the same variation_id.
+        :param kwargs:
+        """
+        return self.client.execute("item/tier_var/update", "POST", kwargs)
+
+
+
+
+
 
