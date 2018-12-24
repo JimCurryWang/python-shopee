@@ -303,13 +303,3 @@ class Item(BaseModule):
         """
         return self.client.execute("item/tier_var/update", "POST", kwargs)
 
-
-
-
-
-
-
-
-
-
-

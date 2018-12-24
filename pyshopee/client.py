@@ -12,6 +12,7 @@ from .order import Order
 from .logistic import Logistic
 from .rma import RMA
 from .public import Public
+from .toppicks import Toppicks
 
 
 # installed sub-module
@@ -24,7 +25,8 @@ registered_module = {
     "order": Order,
     "logistic": Logistic,
     "rma": RMA,
-    "public": Public
+    "public": Public,
+    "toppicks": Toppicks
 }
 
 
