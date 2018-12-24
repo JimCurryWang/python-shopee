@@ -26,6 +26,22 @@ class Item(BaseModule):
         """
         return self.client.execute("item/delete", "POST", kwargs)
 
+
+    def unlist_item(self, **kwargs):
+        """
+        Use this api to unlist or list items in batch.
+        :param kwargs:
+            items = [
+                {
+                    "item_id": "Item's unique identifier"
+                    "unlist": "True: unlist this item; False: list this item"
+                }
+            ]
+
+        @@Significant OpenAPI Updates (2018-12-14)
+        """
+        return self.client.execute("items/unlist", "POST", kwargs)
+
     def update_item(self, update_data):
         """
         Use this call to update a product item. 
@@ -36,6 +52,16 @@ class Item(BaseModule):
         :return:
         """
         return self.client.execute("item/update", "POST", update_data)
+
+    def update_img(self,  **kwargs):
+        """
+        Override and update all the existing images of an item.
+        
+        :params example:
+            item_id = 1208720868
+            images = "http://f.shopee.ph/file/805af6fd2bd978299505dac9e3c09107"
+        """
+        return self.client.execute("item/img/update", "POST", kwargs)
 
     def get_item_list(self, **kwargs):
         """
@@ -276,6 +302,11 @@ class Item(BaseModule):
         :param kwargs:
         """
         return self.client.execute("item/tier_var/update", "POST", kwargs)
+
+
+
+
+
 
 
 
