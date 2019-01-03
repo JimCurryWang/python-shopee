@@ -94,7 +94,7 @@ class Client(object, metaclass=ClientMeta):
 
     def _build_response(self, resp):
         '''Decoding JSON - Decode json string to python object
-        JSONDecodeError can happen when requests have an http error code like 404 and try to parse the response as JSON
+        JSONDecodeError can happen when requests have an HTTP error code like 404 and try to parse the response as JSON
         '''
 
         if resp.status_code / 100 == 2:
