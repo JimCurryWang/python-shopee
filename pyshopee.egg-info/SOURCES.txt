@@ -8,9 +8,11 @@ pyshopee/image.py
 pyshopee/item.py
 pyshopee/logistic.py
 pyshopee/order.py
+pyshopee/public.py
 pyshopee/rma.py
 pyshopee/shop.py
 pyshopee/shopcategory.py
+pyshopee/toppicks.py
 pyshopee.egg-info/PKG-INFO
 pyshopee.egg-info/SOURCES.txt
 pyshopee.egg-info/dependency_links.txt

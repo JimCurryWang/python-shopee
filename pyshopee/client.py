@@ -93,14 +93,21 @@ class Client(object, metaclass=ClientMeta):
         return req
 
     def _build_response(self, resp):
+        '''Decoding JSON - Decode json string to python object
+        JSONDecodeError can happen when requests have an HTTP error code like 404 and try to parse the response as JSON
+        '''
 
-        body = json.loads(resp.text)
+        if resp.status_code / 100 == 2:
+            body = json.loads(resp.text)
+        else:
+            body = {"request_id": None, "error": resp.status_code, "msg": "http error code"}
 
         return body
+
         # if "error" not in body:
-            # return body
+        #     return body
         # else:
-            # raise AttributeError(body["error"])
+        #     raise AttributeError(body["error"])        
 
     def _get_cached_module(self, key):
         CACHED_MODULE = self.CACHED_MODULE.get(key)
