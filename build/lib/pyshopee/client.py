@@ -11,6 +11,8 @@ from .discount import Discount
 from .order import Order
 from .logistic import Logistic
 from .rma import RMA
+from .public import Public
+from .toppicks import Toppicks
 
 
 # installed sub-module
@@ -23,6 +25,8 @@ registered_module = {
     "order": Order,
     "logistic": Logistic,
     "rma": RMA,
+    "public": Public,
+    "toppicks": Toppicks
 }
 
 
@@ -39,7 +43,7 @@ class Client(object, metaclass=ClientMeta):
     CACHED_MODULE = {}
     
     BASE_URL = "https://partner.shopeemobile.com/api/v1"
-    PER_MINUTE_API_RATE = 1000
+    # PER_MINUTE_API_RATE = 1000
 
     def __init__(self, shop_id, partner_id, secret_key):
         self.shop_id = shop_id
@@ -89,12 +93,21 @@ class Client(object, metaclass=ClientMeta):
         return req
 
     def _build_response(self, resp):
+        '''Decoding JSON - Decode json string to python object
+        JSONDecodeError can happen when requests have an http error code like 404 and try to parse the response as JSON
+        '''
 
-        body = json.loads(resp.text)
-        if "error" not in body:
-            return body
+        if resp.status_code / 100 == 2:
+            body = json.loads(resp.text)
         else:
-            raise AttributeError(body["error"])
+            body = {"request_id": None, "error": resp.status_code, "msg": "http error code"}
+
+        return body
+
+        # if "error" not in body:
+        #     return body
+        # else:
+        #     raise AttributeError(body["error"])        
 
     def _get_cached_module(self, key):
         CACHED_MODULE = self.CACHED_MODULE.get(key)
@@ -121,3 +134,18 @@ class Client(object, metaclass=ClientMeta):
         resp = s.send(prepped)
         resp = self._build_response(resp)
         return resp
+
+
+    def shop_authorization(self, uri, method, redirect_url):
+        '''
+            The difference between hmac and hashlib, 
+            hmac uses the provided key to generate a salt and make the hash more strong, while hashlib only hashes the provided message
+
+            In shopee partner API, shopee use hmac for general encryption while using hashlib for Authorize and CancelAuthorize module
+        '''
+        bs = self.secret_key + redirect_url
+        dig = hashlib.sha256(bs.encode()).hexdigest()
+        
+        parameters = "/{0}?id={1}&token={2}&redirect={3}".format(uri,self.partner_id,dig,redirect_url)
+        uri = self.BASE_URL + parameters
+        return uri
