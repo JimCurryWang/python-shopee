@@ -40,20 +40,15 @@ class ClientMeta(type):
 class Client(object, metaclass=ClientMeta):
     __metaclass__ = ClientMeta
 
-    ### declare CACHED_MODULE in __init__
-    # CACHED_MODULE = {}
+    CACHED_MODULE = {}
     
     BASE_URL = "https://partner.shopeemobile.com/api/v1"
     # PER_MINUTE_API_RATE = 1000
 
     def __init__(self, shop_id, partner_id, secret_key):
-        ''' initialize basic params and cache class
-        '''
         self.shop_id = shop_id
         self.partner_id = partner_id
         self.secret_key = secret_key
-
-        self.CACHED_MODULE = {}
 
     def __getattr__(self, name):
         try:
