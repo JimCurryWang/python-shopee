@@ -42,9 +42,9 @@ Features
 - Good Response exception handling !
 - New feature will keep maintaining !
 
-_5_ main parts Implementation
+_5_ main parts for implementation
 ---------------------------
-#### 1. Shop Management Module : [Shop](https://open.shopee.com/documents?module=6&type=1&id=410) / [ShopCategory](https://open.shopee.com/documents?module=7&type=1&id=404)
+#### 1. Shop Management Module : [Shop](https://open.shopee.com/documents?module=6&type=1&id=410) / [ShopCategory](https://open.shopee.com/documents?module=7&type=1&id=404) 
 
 #### 2. Orders Management Module : [Orders](https://open.shopee.com/documents?module=4&type=1&id=394)
 
@@ -53,6 +53,10 @@ _5_ main parts Implementation
 #### 4. Products Management Module : [Item](https://open.shopee.com/documents?module=2&type=1&id=365) / [Image](https://open.shopee.com/documents?module=65&type=1&id=412) / [Discount](https://open.shopee.com/documents?module=1&type=1&id=357)
 
 #### 5. RMA Management Module : [Returns](https://open.shopee.com/documents?module=5&type=1&id=401)
+
+#### 6. Collection Management Module: [toppicks](https://open.shopee.com/documents?module=67&type=1&id=435)
+
+
 
 
 
