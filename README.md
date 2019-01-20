@@ -42,7 +42,7 @@ Features
 - Good Response exception handling !
 - New feature will keep maintaining !
 
-_5_ main parts for implementation
+_6_ main parts of implementation
 ---------------------------
 #### 1. Shop Management Module : [Shop](https://open.shopee.com/documents?module=6&type=1&id=410) / [ShopCategory](https://open.shopee.com/documents?module=7&type=1&id=404) 
 
