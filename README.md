@@ -194,7 +194,7 @@ Publish History
     - \+ Add item.UpdateImg
     - \+ Add Top Picks Collection API set
   
-
+- 20190130 New API Release (TBA)
 Note
 ----
 
