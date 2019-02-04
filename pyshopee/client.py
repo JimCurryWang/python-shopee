@@ -137,7 +137,7 @@ class Client(object, metaclass=ClientMeta):
         prepped = req.prepare()
         
         s = Session()
-        resp = s.send(prepped)
+        resp = s.send(prepped, timeout=10)
         resp = self._build_response(resp)
         return resp
 
