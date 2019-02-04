@@ -105,6 +105,7 @@ class Item(BaseModule):
         """
         Use this call to add item variations
         :param variation_data(Object[]):
+            : item_id
             : name
             : stock
             : price

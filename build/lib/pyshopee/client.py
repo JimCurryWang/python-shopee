@@ -40,15 +40,21 @@ class ClientMeta(type):
 class Client(object, metaclass=ClientMeta):
     __metaclass__ = ClientMeta
 
-    CACHED_MODULE = {}
+    ### declare CACHED_MODULE in __init__
+    # CACHED_MODULE = {}
     
     BASE_URL = "https://partner.shopeemobile.com/api/v1"
     # PER_MINUTE_API_RATE = 1000
 
+
     def __init__(self, shop_id, partner_id, secret_key):
+        ''' initialize basic params and cache class 
+        '''
         self.shop_id = shop_id
         self.partner_id = partner_id
         self.secret_key = secret_key
+
+        self.CACHED_MODULE = {}
 
     def __getattr__(self, name):
         try:
@@ -94,7 +100,7 @@ class Client(object, metaclass=ClientMeta):
 
     def _build_response(self, resp):
         '''Decoding JSON - Decode json string to python object
-        JSONDecodeError can happen when requests have an http error code like 404 and try to parse the response as JSON
+        JSONDecodeError can happen when requests have an HTTP error code like 404 and try to parse the response as JSON
         '''
 
         if resp.status_code / 100 == 2:
@@ -131,7 +137,7 @@ class Client(object, metaclass=ClientMeta):
         prepped = req.prepare()
         
         s = Session()
-        resp = s.send(prepped)
+        resp = s.send(prepped, timeout=10)
         resp = self._build_response(resp)
         return resp
 
