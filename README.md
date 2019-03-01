@@ -200,7 +200,7 @@ Publish History
 - 20190225 New Handling For Partial Result Failure of Batch Type API
 
 
-    ### Please note starting from Apr 1st, 2019, we will have new success/failure return rules for the below four APIs:
+    ##### Please note starting from Apr 1st, 2019, we will have new success/failure return rules for the below four APIs:
     - shop_category.AddItems
 
     - shop_category.DeleteItems
@@ -209,11 +209,11 @@ Publish History
 
     - top_picks.UpdateTopPicks
 
-    ### Original rule:
+    ##### Original rule:
 
     ##### These APIs return failure with error code if any part of the batch failed.
 
-    ### New rule:
+    ##### New rule:
 
     ##### These APIs will return success code 200 as long as there is one item_id succeeds from the batch, with the following new return parameter to indicate which parts succeed or fail:
 
