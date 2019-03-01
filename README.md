@@ -200,7 +200,7 @@ Publish History
 - 20190225 New Handling For Partial Result Failure of Batch Type API
 
 
-    ##### Please note starting from Apr 1st, 2019, we will have new success/failure return rules for the below four APIs:
+    ##### Please note starting from Apr 1st, 2019, ShopeeAPI will have new success/failure return rules for the below four APIs:
     - shop_category.AddItems
 
     - shop_category.DeleteItems
