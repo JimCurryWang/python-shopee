@@ -47,7 +47,7 @@ class ShopCategory(BaseModule):
         return self.client.execute("shop_category/get/items", "POST", kwargs)
 
 
-    def get_shop_category(self, **kwargs):
+    def get_shop_categories(self, **kwargs):
         """
         Use this call to get list of in-shop categories
 
@@ -55,8 +55,7 @@ class ShopCategory(BaseModule):
             : pagination_offset 
             : pagination_entries_per_page
         """
-        return self.client.execute("shop_category/get", "POST", kwargs)
-
+        return self.client.execute("shop_categorys/get", "POST", kwargs)
 
     def update_shop_category(self, **kwargs):
         """
