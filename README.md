@@ -218,6 +218,9 @@ Publish History
     ##### These APIs will return success code 200 as long as there is one item_id succeeds from the batch, with the following new return parameter to indicate which parts succeed or fail:
 
 
+- 20190313 New Features - Edit Shop Level Logistics (TBA)
+  - New API: logistics.UpdateShopLogistics
+
 
 Note
 ----
