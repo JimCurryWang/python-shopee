@@ -21,6 +21,7 @@ class Shop(BaseModule):
         @@Significant OpenAPI Updates (2018-09-15/2018-08-13)
         Added item_limit in the return parameters to indicate the max listed item number for the shop.
         """
+        # print(kwargs)
         return self.client.execute("shop/get", "POST", kwargs)
 
     def update_shop_info(self, **kwargs):
