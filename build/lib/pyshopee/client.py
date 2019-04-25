@@ -128,7 +128,15 @@ class Client(object, metaclass=ClientMeta):
 
 
     def execute(self, uri, method, body=None):
+        ''' defalut timeout value will be 10 seconds
+        '''
         parameter = self._make_default_parameter()
+
+        if body.get("timeout"):
+            timeout = body.get("timeout")
+            body.pop("timeout")
+        else:
+            timeout = 10 
 
         if body is not None:
             parameter.update(body)
@@ -137,7 +145,7 @@ class Client(object, metaclass=ClientMeta):
         prepped = req.prepare()
         
         s = Session()
-        resp = s.send(prepped, timeout=10)
+        resp = s.send(prepped, timeout=timeout)
         resp = self._build_response(resp)
         return resp
 

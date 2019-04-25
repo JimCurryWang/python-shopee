@@ -20,7 +20,7 @@ KEYWORDS = "pyshopee,Shopee,Shopee Partners API,python-shopee"
 AUTHOR = "jimcurrywang"
 AUTHOR_EMAIL = "jimcurrywang@gmail.com"
 URL = "https://github.com/JimCurryWang/pyshopee"
-VERSION = "1.3.7"
+VERSION = "1.3.8"
 LICENSE = "MIT"
 
 setup(

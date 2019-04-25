@@ -1,4 +1,4 @@
-pyshopee v1.3.7
+pyshopee v1.3.8
 ================================
 
 [![PyPI](https://img.shields.io/badge/pypi-v1.3.7-blue.svg)](https://pypi.org/project/pyshopee/)
