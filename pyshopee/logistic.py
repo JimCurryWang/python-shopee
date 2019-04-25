@@ -6,19 +6,19 @@ class Logistic(BaseModule):
         shopee Logistic api
     """
 
-    def get_logistics(self):
+    def get_logistics(self, **kwargs):
         """
         Use this call to get all supported Logistic Channel
         :return:
         """
-        return self.client.execute("logistics/channel/get", "POST")
+        return self.client.execute("logistics/channel/get", "POST", kwargs)
 
-    def get_address(self):
+    def get_address(self, **kwargs):
         """
         Use this call to get all required param for init logistic.
         :return:
         """
-        return self.client.execute("logistics/address/get", "POST")
+        return self.client.execute("logistics/address/get", "POST", kwargs)
 
     def get_airway_bill(self, **kwargs):
         """
