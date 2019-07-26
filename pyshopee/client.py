@@ -11,6 +11,7 @@ from .discount import Discount
 from .order import Order
 from .logistic import Logistic
 from .rma import RMA
+from .returns import Returns
 from .public import Public
 from .toppicks import Toppicks
 
