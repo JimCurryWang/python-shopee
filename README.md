@@ -1,4 +1,4 @@
-pyshopee v1.3.8
+pyshopee v1.3.9
 ================================
 
 [![PyPI](https://img.shields.io/badge/pypi-v1.3.7-blue.svg)](https://pypi.org/project/pyshopee/)
@@ -40,7 +40,6 @@ Features
 - No need to generate authentication and timestamps by yourself, the wrapper does it for you.
 - Module format functionality the same as shopee officail document.
 - Good Response exception handling !
-- New feature will keep maintaining !
 
 _6_ main parts of implementation
 ---------------------------
@@ -77,7 +76,7 @@ $ python setup.py install
 Quick Start
 -----------
 
-#### import pyshopee & get order by status
+#### Import pyshopee & get order by status
 ```python
 import pyshopee
 
@@ -87,14 +86,14 @@ client = pyshopee.Client( shopid, partnerid, API_key )
 resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
 print(resp)
 ```
-#### get order list 
+#### Get order list 
 
 ```python
 # get_order_list
 resp = client.order.get_order_list(create_time_from = 1512117303, create_time_to=1512635703)
 print(resp)
 ```
-#### get order detail
+#### Get order detail
 
 ```python
 '''
@@ -107,7 +106,7 @@ resp = client.order.get_order_detail(ordersn_list = ordersn_list )
 print(resp)
 ```
 
-#### get order escrow detail
+#### Get order escrow detail
 ```python
 '''
 ordersn , type:String [] 
