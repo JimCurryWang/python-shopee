@@ -9,6 +9,7 @@ pyshopee/item.py
 pyshopee/logistic.py
 pyshopee/order.py
 pyshopee/public.py
+pyshopee/returns.py
 pyshopee/rma.py
 pyshopee/shop.py
 pyshopee/shopcategory.py
