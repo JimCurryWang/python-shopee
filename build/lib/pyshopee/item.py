@@ -15,6 +15,12 @@ class Item(BaseModule):
 
         @@Significant OpenAPI Updates (2018-09-15/2018-08-13)
         Aligned the length of variation name with Seller Center to 20 letters.
+
+
+        @@Significant OpenAPI Updates (2019-06-25)
+        Support Unlist as New Upload Item Status
+            Optimized APIs: item.Add
+            New Request Field: status
         """
         return self.client.execute("item/add", "POST", product_data)
 
@@ -266,7 +272,7 @@ class Item(BaseModule):
         @@Significant OpenAPI Updates (2018-12-01)
     '''
     
-    def InitTierVariation(self, **kwargs):
+    def init_tier_variation(self, **kwargs):
         """
         Initialize a non-tier-variation item to a tier-variation item, and initialize stock and price for each variation. 
         This API cannot edit existed tier_variation and variation price/stock.
@@ -274,7 +280,7 @@ class Item(BaseModule):
         """
         return self.client.execute("item/tier_var/init", "POST", kwargs)
 
-    def AddTierVariation(self, **kwargs):
+    def add_tier_variation(self, **kwargs):
         """
         Use this api to add new tier variations in batch. 
         Tier variation index of variations in the same item must be unique.
@@ -282,14 +288,14 @@ class Item(BaseModule):
         """
         return self.client.execute("item/tier_var/add", "POST", kwargs)
 
-    def GetVariations(self, **kwargs):
+    def get_variations(self, **kwargs):
         """
         Use this call to get tier-variation basic information under an item.
         :param kwargs:
         """
         return self.client.execute("item/tier_var/get", "POST", kwargs)
 
-    def UpdateTierVariationList(self, **kwargs):
+    def update_tier_variation_list(self, **kwargs):
         """
         Use this api to update tier-variation list of a tier-variation item.
         :param kwargs:
@@ -297,10 +303,54 @@ class Item(BaseModule):
         return self.client.execute("item/tier_var/update_list", "POST", kwargs)
 
 
-    def UpdateTierVariationIndex(self, **kwargs):
+    def update_tier_variation_index(self, **kwargs):
         """
         Use this api to update existing tier index under the same variation_id.
         :param kwargs:
         """
         return self.client.execute("item/tier_var/update", "POST", kwargs)
+
+
+    def boost_item(self, **kwargs):
+        """
+        Use this api to boost multiple items at once.
+        :param kwargs:
+            - item_id(uint32[]) : A list of item ids to be boosted. You can input a maximum of 5 items per request.
+            
+        @@Significant OpenAPI Updates (2019-06-03)
+        """
+        return self.client.execute("items/boost", "POST", kwargs)
+
+
+    def get_boosted_items(self, **kwargs):
+        """
+        Use this api to get all boosted items.
+        :param kwargs:
+
+        @@Significant OpenAPI Updates (2019-06-03)
+        """
+        return self.client.execute("items/get_boosted", "POST", kwargs)
+
+
+    def set_item_installment_tenures(self, **kwargs):
+        """
+        Only for TW whitelisted shop. Use this API to set the installment tenures of items.
+        :param kwargs:
+            - item_id(uint32): Shopee's unique identifier for an item.
+            - tenures(list): List of installments, applicable values: 3, 6, 12, 24. 
+                             If the list is empty, it means you wanna close the installment.
+
+        @@Significant OpenAPI Updates (2019-06-03)
+        """
+        return self.client.execute("item/installment/set", "POST", kwargs)
+
+
+
+
+
+
+
+
+
+
 
