@@ -121,7 +121,7 @@ print(resp)
 
 
 Advance Details for others functions
--------
+--------
 
 ```python
 # usage
@@ -137,6 +137,53 @@ client.[type].[function name]
   - Discount
   - Returns
 ```
+
+
+Advance parameters you must want to know
+--------
+
+### Timeout
+
+You can find the source code in client.py, and pyshopee have a timeout params in there.
+Hence, every execute funtion can add an extra timeout setting, depending on your choice.
+
+```python
+
+def execute(self, uri, method, body=None):
+    ''' defalut timeout value will be 10 seconds
+    '''
+    parameter = self._make_default_parameter()
+
+    if body.get("timeout"):
+        timeout = body.get("timeout")
+        body.pop("timeout")
+    else:
+        timeout = 10 
+
+    if body is not None:
+        parameter.update(body)
+
+    req = self._build_request(uri, method, parameter)
+    prepped = req.prepare()
+    
+    s = Session()
+    resp = s.send(prepped, timeout=timeout)
+    resp = self._build_response(resp)
+    return resp
+```
+
+For example, we can set the timeout as 20 seconds in the execute requests(default value is 10s).
+
+```python
+ordersn = '1712071633982A7'
+resp = client.order.get_order_escrow_detail(ordersn = ordersn, timeout=20)
+print(resp)
+
+```
+
+### Add Item Example
+
+For more details on how to add item via pyshopee, please take a look on folder "example/add.py"
 
 
 Developer Note
