@@ -25,6 +25,7 @@ registered_module = {
     "discount":Discount,
     "order": Order,
     "logistic": Logistic,
+    "returns": Returns,
     "rma": RMA,
     "public": Public,
     "toppicks": Toppicks
