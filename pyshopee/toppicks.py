@@ -26,7 +26,7 @@ class Toppicks(BaseModule):
         return self.client.execute("top_picks/update", "POST", kwargs)
 
 
-    def add_top_picks(self, **kwargs):
+    def delete_top_picks(self, **kwargs):
         """
         Delete a collection.
         :param kwargs:
