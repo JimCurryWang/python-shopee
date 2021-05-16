@@ -343,6 +343,8 @@ class Item(BaseModule):
         @@Significant OpenAPI Updates (2019-06-03)
         """
         return self.client.execute("item/installment/set", "POST", kwargs)
+     def get_comment(self, **kwargs):
+        return self.client.execute("items/comments/get","POST",kwargs)
 
 
 
