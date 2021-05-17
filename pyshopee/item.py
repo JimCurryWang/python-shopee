@@ -345,7 +345,15 @@ class Item(BaseModule):
         return self.client.execute("item/installment/set", "POST", kwargs)
 
 
+    def reply_comment(self,**kwargs):
+        """
+        Use this api to reply comment in batch.
+        :param kwargs:
 
+        @@Significant OpenAPI Updates (2019-06-03)
+        """
+
+        return self.client.execute("items/comments/reply","POST",kwargs)
 
 
 
