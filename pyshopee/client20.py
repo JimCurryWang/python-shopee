@@ -5,7 +5,7 @@ import hashlib
 from selenium import webdriver
 from urllib3.util import parse_url
 
-class Client:
+class Client20:
 
     def __init__(self, partner_id, partner_key, redirect_url, host ='https://partner.uat.shopeemobile.com'):
 

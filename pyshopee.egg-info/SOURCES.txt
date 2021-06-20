@@ -1,8 +1,10 @@
+LICENSE
 README.md
 setup.py
 pyshopee/__init__.py
 pyshopee/base.py
 pyshopee/client.py
+pyshopee/client20.py
 pyshopee/discount.py
 pyshopee/image.py
 pyshopee/item.py

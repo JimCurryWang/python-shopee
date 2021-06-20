@@ -1,4 +1,4 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: pyshopee
 Version: 1.3.9
 Summary: python implementation for Shopee Partners API.
@@ -6,10 +6,13 @@ Home-page: https://github.com/JimCurryWang/pyshopee
 Author: jimcurrywang
 Author-email: jimcurrywang@gmail.com
 License: MIT
-Description: UNKNOWN
 Keywords: pyshopee,Shopee,Shopee Partners API,python-shopee
 Platform: UNKNOWN
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python
 Classifier: Intended Audience :: Developers
 Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+UNKNOWN
+
