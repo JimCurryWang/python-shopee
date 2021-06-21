@@ -7,6 +7,10 @@ from selenium import webdriver
 from urllib3.util import parse_url
 import requests
 from .shop import Shop
+
+from .returns import Returns
+from .accounthealth import AccountHealth
+from .chat import Chat
 from .public import Public
 from .push import Push
 #from .shopcategory import ShopCategory
@@ -23,6 +27,10 @@ from .push import Push
 # installed sub-module
 registered_module = {
     "shop": Shop,
+
+    "returns" : Returns,
+    "accounthealth" : AccountHealth,
+    "chat" : Chat,
     "public" : Public,
     "push" : Push
 #    "shopcategory": ShopCategory,
@@ -100,10 +108,10 @@ class Client(object, metaclass=ClientMeta):
     def _make_default_parameter(self, timest, sign):
         return {
             "Partner_id": self.partner_id,
-            "Shop_id": self.shop_id,
-            "Sign": sign,
             "Timestamp": timest,
-            "Access_token": self.access_token
+            "Access_token": self.access_token,
+            "Shop_id": self.shop_id,
+            "Sign": sign
         }
 
     def _make_short_default_parameter(self, timest, sign):
@@ -123,37 +131,41 @@ class Client(object, metaclass=ClientMeta):
         sign = hmac.new(self.partner_key.encode(), base_string, hashlib.sha256).hexdigest()
         return sign
 
-    def _api_url(self, path, timest, sign):
-        url = self.host + path + f'?partner_id={self.partner_id}&shop_id={self.shop_id}&timestamp={timest}$access_token={self.access_token}&sign={sign}'
+    def _api_url(self, path):
+        url = self.host + path
         return  url
 
-    def _api_short_url(self, path, timest, sign):
-        url = self.host + path + f'?partner_id={self.partner_id}&timestamp={timest}&sign={sign}'
-        return  url
+    def _create_parameter_url(self, url, parameter):
+        if parameter !=None:
+            url = url + "?"
+            par = ""
+            for param in parameter:
+                if par != "":
+                    par = par + "&"
+                par = par + f"{param.lower()}={parameter[param]}"
+            return url + par
+        return url
 
     def _build_request(self, uri, method, body):
         method = method.upper()
         headers = {'Content-Type': 'application/json'}
         timest = self._make_timestamp()
         uri = self.BASE_API_URL + uri
-        if ("public" in uri) or ("push" in uri):
+        url = self.host + uri
+        if ("/public/" in uri) or ("/push/" in uri):
             sign = self._api_short_sign(uri, timest)
-            url = self._api_short_url(uri, timest, sign)
             parameter = self._make_short_default_parameter(timest, sign)
         else:
             sign = self._api_sign(uri, timest)
-            url = self._api_url(uri, timest, sign)
             parameter = self._make_default_parameter(timest, sign)
 #        parameter = self.set_additional_parameter(parameter, sign, timest, self.access_token)
         req = Request(method, url, headers=headers)
-        req.params = parameter
-
         if body:
-            if req.method in ["POST", "PUT", "PATH"]:
+            if method in ["POST", "PUT", "PATH"]:
                 req.json = body
             else:
                 parameter.update(body)
-                req.params = parameter
+        req.url = self._create_parameter_url(url, parameter)
         return req
 
     def _build_response(self, resp):
@@ -199,6 +211,7 @@ class Client(object, metaclass=ClientMeta):
 
         req = self._build_request(uri, method, body)
         print(req.params)
+        print(req.url)
         prepped = req.prepare()
 
         s = Session()
