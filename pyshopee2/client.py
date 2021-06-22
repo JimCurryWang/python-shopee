@@ -6,28 +6,39 @@ from requests import Request, Session, exceptions
 from selenium import webdriver
 from urllib3.util import parse_url
 import requests
-from .shop import Shop
 
+from .product import Product
+from .mediaspace import MediaSpace
+from .shop import Shop
+from .merchant import Merchant
+from .order import Order
+from .logistics import Logistics
+from .firstmile import FirstMile
+from .payment import Payment
+from .discount import Discount
+from .bundledeal import BundleDeal
+from .addondeal import AddonDeal
+from .toppicks import Toppicks
 from .returns import Returns
 from .accounthealth import AccountHealth
 from .chat import Chat
 from .public import Public
 from .push import Push
-#from .shopcategory import ShopCategory
-#from .item import Item
-#from .image import Image
-#from .discount import Discount
-#from .order import Order
-#from .logistic import Logistic
-#from .rma import RMA
-#from .returns import Returns
-#from .public import Public
-#from .toppicks import Toppicks
 
 # installed sub-module
 registered_module = {
+    "product": Product,
+    "mediaspace": MediaSpace,
     "shop": Shop,
-
+    "merchant": Merchant,
+    "order": Order,
+    "logistics": Logistics,
+    "firstmile" : FirstMile,
+    "payment" : Payment,
+    "discount" : Discount,
+    "bundledeal": BundleDeal,
+    "addondeal": AddonDeal,
+    "toppicks": Toppicks,
     "returns" : Returns,
     "accounthealth" : AccountHealth,
     "chat" : Chat,
@@ -42,7 +53,7 @@ registered_module = {
 #    "returns": Returns,
 #    "rma": RMA,
 #    "public": Public,
-#    "toppicks": Toppicks
+
 }
 
 
