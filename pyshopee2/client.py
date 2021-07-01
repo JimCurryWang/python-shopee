@@ -18,6 +18,8 @@ from .payment import Payment
 from .discount import Discount
 from .bundledeal import BundleDeal
 from .addondeal import AddonDeal
+from .voucher import Voucher
+from .followprize import FollowPrize
 from .toppicks import Toppicks
 from .returns import Returns
 from .accounthealth import AccountHealth
@@ -38,6 +40,8 @@ registered_module = {
     "discount" : Discount,
     "bundledeal": BundleDeal,
     "addondeal": AddonDeal,
+    "voucher" : Voucher,
+    "followprize" : FollowPrize,
     "toppicks": Toppicks,
     "returns" : Returns,
     "accounthealth" : AccountHealth,
