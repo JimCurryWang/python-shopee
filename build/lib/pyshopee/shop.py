@@ -36,6 +36,7 @@ class Shop(BaseModule):
             - shop_description
         :return
         """
+        print("api 1")
         return self.client.execute("shop/update", "POST", kwargs)
 
     def performance(self, **kwargs):
