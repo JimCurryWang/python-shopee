@@ -80,7 +80,7 @@ class Client(object, metaclass=ClientMeta):
 
     # PER_MINUTE_API_RATE = 1000
 
-    def __init__(self, shop_id, partner_id, partner_key, redirect_url, test_env=False):
+    def __init__(self, shop_id, partner_id, partner_key, redirect_url, test_env=False, code = None ,access_token = None, refresh_token = None):
         ''' initialize basic params and cache class
         '''
         if test_env:
@@ -90,9 +90,9 @@ class Client(object, metaclass=ClientMeta):
         self.redirect_url = redirect_url
         self.host = self.BASE_URL
         self.shop_id = int(shop_id)
-        self.code = None
-        self.access_token = None
-        self.refresh_token = None
+        self.code = code
+        self.access_token = access_token
+        self.refresh_token = refresh_token
         self.timeout = None
 
         self.CACHED_MODULE = {}
