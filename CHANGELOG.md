@@ -54,3 +54,7 @@ Publish History
   
 - 20190425 Hotfix_feature_4.25 - Add timeout params
 
+- 20240229 Update Pyshopee2 module
+  - Add Pyshopee2 module
+  - Add tea.xyz config to make project on-chain
+
