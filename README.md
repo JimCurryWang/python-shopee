@@ -1,4 +1,4 @@
-pyshopee v1.3.9
+pyshopee v1.4.0
 ================================
 
 [![PyPI](https://img.shields.io/badge/pypi-v1.3.7-blue.svg)](https://pypi.org/project/pyshopee/)
@@ -15,6 +15,30 @@ If you came here looking for the [Shopee seller center](https://seller.shopee.tw
 ```shell
 $ pip install pyshopee
 ```
+
+### Example for using pyshopee2 (Latest)
+
+- change `pyshopee.Client` to `pyshopee.Client20`
+
+```python
+import pyshopee
+
+client = pyshopee.Client20( shopid, partnerid, API_key )
+
+# get_order_by_status (UNPAID/READY_TO_SHIP/SHIPPED/COMPLETED/CANCELLED/ALL)
+resp = client.order.get_order_by_status(order_status="READY_TO_SHIP")
+print(resp)
+
+
+# shop authorize and cancel_authorize url
+authorize_url = client.shop.authorize(redirect_url="https://shopee.tw")
+print(authorize_url)
+
+cancel_authorize_url = client.shop.cancel_authorize(redirect_url="https://shopee.tw")
+print(cancel_authorize_url)
+```
+
+### Example for using pyshopee (old)
 
 ```python
 import pyshopee
@@ -33,6 +57,7 @@ print(authorize_url)
 cancel_authorize_url = client.shop.cancel_authorize(redirect_url="https://shopee.tw")
 print(cancel_authorize_url)
 ```
+
 Features
 --------
   
